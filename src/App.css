@@ -16,7 +16,7 @@ html {
 
 body {
   height: 100%;
-  background-image: url('./background.jpg');
+  background-image: url('./Images/background.jpg');
   background-size: cover;
   background-position-y: -5vw;
 }
@@ -24,22 +24,28 @@ body {
 .searchButton {
   padding: 1vh;
   color: white;
-  background: url('./searchBackground.webp');
+  background: url('./Images/searchBackground.webp');
 }
 
 #searchInput {
+  width: 70%;
   padding: 0.8vh;
 }
 
 .mainMenu {
-  max-width: 15rem;
+  max-width: 30rem !important;
   margin: 2vh;
-  min-width: 15rem;
+  min-width: 30rem !important;
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('./inputBackground.jpg');
+  background: url('./Images/inputBackground.jpg');
+}
+
+.mainMenuCardBody {
+  text-align: center;
+  width: 100%;
 }
 
 .result-cards {

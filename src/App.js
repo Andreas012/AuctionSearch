@@ -1,24 +1,32 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import WeaponItemCard from './Components/ItemCard/WeaponItemCard';
+import { Redirect } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import Spinner from 'react-bootstrap/Spinner';
+import saveItem from '.';
+
+import ItemCard from './Components/ItemCard/ItemCard';
 
 import './App.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
   const [results, setResults] = useState([]);
   const [searchInput, setSearchInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [redirect, setRedirect] = useState(false);
+  const [item, setItem] = useState();
 
+  const handleRouter = async (data) => {
+    await saveItem(data);
+    setRedirect(true);
+  }
   const searchItem = (e) => {
     if (e.length > 3) {
       return axios({
         validateStatus: false,
         method: 'get',
-        url: `https://us.api.blizzard.com/data/wow/search/item?namespace=static-us&name.en_US=${e}&orderby=id&_page=1&_pageSize=100&access_token=USXul87N1EqDWmZBF4q7CeuGpddjRJ2Yyc`
+        url: `https://eu.api.blizzard.com/data/wow/search/item?namespace=static-classic-eu&name.en_GB=${e}&orderby=id&_page=1&_pageSize=300&access_token=USXul87N1EqDWmZBF4q7CeuGpddjRJ2Yyc`
 
       })
         .then(function (response) {
@@ -37,11 +45,13 @@ function App() {
         });
     }
   }
-
   const RenderCards = () => {
     if (results !== null) {
       return results.map((e) => {
-        return <WeaponItemCard key={e.data.id} props={e.data} />
+        switch (e.data.item_class.name.en_GB) {
+          default:
+            return <ItemCard key={e.data.id} props={e.data} handleRouter={handleRouter} />
+        }
       });
     }
   };
@@ -52,10 +62,11 @@ function App() {
 
   return (
     <div className="App">
+      {redirect ? <Redirect to="/item" item={item} /> : null}
       < Card className="mainMenu" style={{ maxWidth: '15rem', margin: '2vh', minWidth: '15rem', height: '10vh' }}>
-        <Card.Body>
+        <Card.Body className="mainMenuCardBody">
           <input type="text" id="searchInput" onChange={(e) => setSearchInput(e.target.value)} />
-          <input className="searchButton" type="submit" value="Submit" onClick={() => { searchItem(searchInput); setLoading(true); }} />
+          <input className="searchButton" type="submit" value="Search" onClick={() => { searchItem(searchInput); setLoading(true); }} />
         </Card.Body>
       </Card >
       <div className="result-cards">

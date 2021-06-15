@@ -8,6 +8,7 @@
     font-family: Verdana,"Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
     font-size: 14px;
     min-height: 5vw;
+    cursor: pointer;
 }
 
 p {
@@ -31,6 +32,14 @@ p {
 }
 
 .binding {
+    color: white;
+    padding: 0px 0px 0px 8px;
+    margin: 0px 0px 0px 0px;
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.requirements {
     color: white;
     padding: 0px 0px 0px 8px;
     margin: 0px 0px 0px 0px;
@@ -65,7 +74,7 @@ p {
 .useEffect {
     color: #1eff00;
     padding: 0px 0px 0px 8px;
-    margin: 0px 8px 10px 0px;
+    margin: 0px 8px 0px 0px;
     margin-top: 0;
     font-size: 12px;
 }

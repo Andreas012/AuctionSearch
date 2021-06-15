@@ -1,0 +1,11 @@
+.chart {
+    background: url('../Components/ItemCard/images/tooltip.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: grey;
+    max-height: 28vw;
+    max-width: 65vw;
+    margin: 3vh;
+}

@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ItemView from './ItemView';
+
+import './index.css';
+
+var item;
+const saveItem = (data) => {
+  item = data;
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <div>
+        <Route exact path="/">
+          <App />
+        </Route>
+        <Route path="/item" render={() => (<ItemView {...item} />)} />
+      </div>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
+export default saveItem;
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
