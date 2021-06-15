@@ -1,0 +1,79 @@
+.card {
+    background: url('./images/tooltip.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: grey;
+    font-family: Verdana,"Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 14px;
+    min-height: 5vw;
+}
+
+p {
+    display: flex;
+}
+
+.type-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title {
+    padding: 8px 0px 0px 8px;
+}
+
+.item-level {
+    color: #ffd100;
+    padding: 0px 0px 0px 8px;
+    margin: 0px 0px 0px 0px;
+    font-size: 12px;
+}
+
+.binding {
+    color: white;
+    padding: 0px 0px 0px 8px;
+    margin: 0px 0px 0px 0px;
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.quantity {
+    color: white;
+    padding: 0px 0px 0px 8px;
+    margin: 0px 0px 0px 0px;
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.type {
+    color: white;
+    padding: 0px 0px 0px 8px;
+    margin: 0px 0px 0px 0px;
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.weapon-type {
+    color: white;
+    padding: 0px 0px 0px 8px;
+    margin: 0px 8px 10px 0px;
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.useEffect {
+    color: #1eff00;
+    padding: 0px 0px 0px 8px;
+    margin: 0px 8px 10px 0px;
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.sellPrice {
+    color: white;
+    padding: 0px 0px 0px 8px;
+    margin: 0px 8px 10px 0px;
+    margin-top: 0;
+    font-size: 12px;
+  }
