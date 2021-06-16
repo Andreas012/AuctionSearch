@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/AuctionSearch/static/css/main.f08e1628.chunk.css",
+    "main.js": "/AuctionSearch/static/js/main.bbcd336e.chunk.js",
+    "main.js.map": "/AuctionSearch/static/js/main.bbcd336e.chunk.js.map",
+    "runtime-main.js": "/AuctionSearch/static/js/runtime-main.690c31a4.js",
+    "runtime-main.js.map": "/AuctionSearch/static/js/runtime-main.690c31a4.js.map",
+    "static/js/2.79066c73.chunk.js": "/AuctionSearch/static/js/2.79066c73.chunk.js",
+    "static/js/2.79066c73.chunk.js.map": "/AuctionSearch/static/js/2.79066c73.chunk.js.map",
+    "index.html": "/AuctionSearch/index.html",
+    "static/css/main.f08e1628.chunk.css.map": "/AuctionSearch/static/css/main.f08e1628.chunk.css.map",
+    "static/js/2.79066c73.chunk.js.LICENSE.txt": "/AuctionSearch/static/js/2.79066c73.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/AuctionSearch/static/media/searchBackground.2dc6a33a.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.690c31a4.js",
+    "static/js/2.79066c73.chunk.js",
+    "static/css/main.f08e1628.chunk.css",
+    "static/js/main.bbcd336e.chunk.js"
+  ]
+}
