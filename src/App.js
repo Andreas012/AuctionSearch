@@ -17,8 +17,8 @@ function App() {
   const [redirect, setRedirect] = useState(false);
   const [item, setItem] = useState();
 
-  const handleRouter = async (data) => {
-    await saveItem(data);
+  const handleRouter = async (data, rawPrice) => {
+    await saveItem(data, rawPrice);
     setRedirect(true);
   }
   const searchItem = (e) => {

@@ -1,6 +1,6 @@
 .card {
     background: url('./images/tooltip.png');
-    background-size: cover;
+    background-size: cover !important;
     background-repeat: no-repeat;
     border-radius: 10px;
     border-style: solid;
@@ -85,4 +85,12 @@ p {
     margin: 0px 8px 10px 0px;
     margin-top: 0;
     font-size: 12px;
-  }
+}
+
+.itemPrice {
+    color: white;
+    padding: 0px 0px 0px 8px;
+    margin: 0px 8px 10px 0px;
+    margin-top: 0;
+    font-size: 12px;
+}

@@ -7,8 +7,10 @@ import ItemView from './ItemView';
 import './index.css';
 
 var item;
-const saveItem = (data) => {
+var rawPrices;
+const saveItem = (data, rawPrice) => {
   item = data;
+  rawPrices = rawPrice;
 };
 
 ReactDOM.render(
@@ -18,7 +20,7 @@ ReactDOM.render(
         <Route exact path="/">
           <App />
         </Route>
-        <Route path="/item" render={() => (<ItemView {...item} />)} />
+        <Route path="/item" render={() => (<ItemView {...item} {...rawPrices} />)} />
       </div>
     </Router>
   </React.StrictMode>,

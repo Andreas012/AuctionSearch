@@ -21,8 +21,20 @@ body {
   background-position-y: -5vw;
 }
 
+@font-face {
+  font-family: wow;
+  src: url(./LifeCraft_Font.ttf);
+}
+
 .searchButton {
+  font-family: wow;
   padding: 1vh;
+  color: white;
+  background: url('./Images/searchBackground.webp');
+}
+
+.backButton {
+  font-family: wow;
   color: white;
   background: url('./Images/searchBackground.webp');
 }

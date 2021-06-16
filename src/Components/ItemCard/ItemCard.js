@@ -10,6 +10,14 @@ function ItemCard(props) {
 
     const [item, setItem] = useState(null);
     const [imageUrl, setImageUrl] = useState(null);
+    const [marketValueGold, setMarketValueGold] = useState(null);
+    const [marketValueSilver, setMarketValueSilver] = useState(null);
+    const [marketValueCopper, setMarketValueCopper] = useState(null);
+    const [minBuyoutGold, setMinBuyoutGold] = useState(null);
+    const [minBuyoutSilver, setMinBuyoutSilver] = useState(null);
+    const [minBuyoutCopper, setMinBuyoutCopper] = useState(null);
+    const [quantity, setQuantity] = useState(null);
+    const [rawPrice, setRawPrice] = useState(null);
 
     const searchItem = (e) => {
         return axios({
@@ -19,6 +27,7 @@ function ItemCard(props) {
             .then(function (response) {
                 setItem(response.data);
                 getImage(response.data.media.id);
+                getItemPrice(e);
             })
             .catch(function (error) {
                 return null;
@@ -58,13 +67,29 @@ function ItemCard(props) {
             });
     }
 
+    const getItemPrice = (e) => {
+        return axios({
+            method: 'get',
+            url: `https://api.nexushub.co/wow-classic/v1/items/bloodfang-alliance/${e}/prices`
+        })
+            .then(function (response) {
+                setRawPrice(response.data.data);
+                setMinBuyoutGold(Math.trunc(response.data.data[response.data.data.length - 1].minBuyout / 10000));
+                setMinBuyoutSilver(Math.trunc((response.data.data[response.data.data.length - 1].minBuyout % 10000) / 100));
+                setMinBuyoutCopper(Math.trunc((response.data.data[response.data.data.length - 1].minBuyout % 10000) % 100));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
     useEffect(() => {
         searchItem(props.props.id);
         // eslint-disable-next-line
     }, []);
 
     return (
-        <div className="item-card" style={{ display: 'flex' }} onClick={() => { props.handleRouter(item) }}>
+        <div className="item-card" style={{ display: 'flex' }} onClick={() => { props.handleRouter(item, rawPrice) }}>
             <Card style={{ maxWidth: '3.5rem', minWidth: '3.5rem', maxHeight: '3.5rem', minHeight: '3.5rem', marginTop: '2vh', background: `url(${imageUrl})` }} />
             <Card style={{ maxWidth: '15rem', margin: '2vh', marginLeft: '5px', minWidth: '15rem' }}>
                 <Card.Body>
@@ -83,6 +108,12 @@ function ItemCard(props) {
                         {item !== null && item.preview_item.sell_price !== undefined && parseInt(item.preview_item.sell_price.display_strings.silver) > 0 ? <> {item.preview_item.sell_price.display_strings.silver}<img src={silverCoin} alt="" /> </> : null}
                         {item !== null && item.preview_item.sell_price !== undefined && parseInt(item.preview_item.sell_price.display_strings.copper) > 0 ? <> {item.preview_item.sell_price.display_strings.copper}<img src={copperCoin} alt="" /> </> : null}
                     </Card.Text>
+                    {minBuyoutGold !== null ? <Card.Text className="itemPrice">
+                        {item !== null && item.preview_item.sell_price !== undefined ? 'Min Buyout: ' : null}
+                        {minBuyoutGold !== null ? <> {minBuyoutGold}<img src={goldCoin} alt="" /> </> : null}
+                        {minBuyoutSilver !== null ? <> {minBuyoutSilver}<img src={silverCoin} alt="" /> </> : null}
+                        {minBuyoutCopper !== null ? <> {minBuyoutCopper}<img src={copperCoin} alt="" /> </> : null}
+                    </Card.Text> : null}
                 </Card.Body>
             </Card >
         </div>
