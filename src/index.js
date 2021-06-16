@@ -17,7 +17,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <div>
-        <Route exact path="/">
+        <Route exact path="/AuctionSearch">
           <App />
         </Route>
         <Route path="/item" render={() => (<ItemView {...item} {...rawPrices} />)} />

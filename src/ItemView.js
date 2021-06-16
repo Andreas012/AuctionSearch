@@ -14,7 +14,7 @@ function ItemView(props) {
 
   return (
     <>
-      {redirect ? <Redirect to="/" /> : null}
+      {redirect ? <Redirect to="/AuctionSearch" /> : null}
       <div className="ItemView">
         <ItemCardSpecific props={props} />
       </div >
