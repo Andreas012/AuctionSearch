@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/AuctionSearch/static/css/main.a8748661.chunk.css",
-    "main.js": "/AuctionSearch/static/js/main.40b97ba2.chunk.js",
-    "main.js.map": "/AuctionSearch/static/js/main.40b97ba2.chunk.js.map",
+    "main.css": "/AuctionSearch/static/css/main.908f46b0.chunk.css",
+    "main.js": "/AuctionSearch/static/js/main.dc5df09e.chunk.js",
+    "main.js.map": "/AuctionSearch/static/js/main.dc5df09e.chunk.js.map",
     "runtime-main.js": "/AuctionSearch/static/js/runtime-main.03f3d9fe.js",
     "runtime-main.js.map": "/AuctionSearch/static/js/runtime-main.03f3d9fe.js.map",
-    "static/js/2.0233b0ac.chunk.js": "/AuctionSearch/static/js/2.0233b0ac.chunk.js",
-    "static/js/2.0233b0ac.chunk.js.map": "/AuctionSearch/static/js/2.0233b0ac.chunk.js.map",
+    "static/js/2.88dc2f68.chunk.js": "/AuctionSearch/static/js/2.88dc2f68.chunk.js",
+    "static/js/2.88dc2f68.chunk.js.map": "/AuctionSearch/static/js/2.88dc2f68.chunk.js.map",
     "index.html": "/AuctionSearch/index.html",
-    "static/css/main.a8748661.chunk.css.map": "/AuctionSearch/static/css/main.a8748661.chunk.css.map",
-    "static/js/2.0233b0ac.chunk.js.LICENSE.txt": "/AuctionSearch/static/js/2.0233b0ac.chunk.js.LICENSE.txt",
+    "static/css/main.908f46b0.chunk.css.map": "/AuctionSearch/static/css/main.908f46b0.chunk.css.map",
+    "static/js/2.88dc2f68.chunk.js.LICENSE.txt": "/AuctionSearch/static/js/2.88dc2f68.chunk.js.LICENSE.txt",
     "static/media/App.css": "/AuctionSearch/static/media/searchBackground.2dc6a33a.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.03f3d9fe.js",
-    "static/js/2.0233b0ac.chunk.js",
-    "static/css/main.a8748661.chunk.css",
-    "static/js/main.40b97ba2.chunk.js"
+    "static/js/2.88dc2f68.chunk.js",
+    "static/css/main.908f46b0.chunk.css",
+    "static/js/main.dc5df09e.chunk.js"
   ]
 }
