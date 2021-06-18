@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/AuctionSearch/static/css/main.6f244dd1.chunk.css",
-    "main.js": "/AuctionSearch/static/js/main.8c3b8561.chunk.js",
-    "main.js.map": "/AuctionSearch/static/js/main.8c3b8561.chunk.js.map",
+    "main.css": "/AuctionSearch/static/css/main.53456ef3.chunk.css",
+    "main.js": "/AuctionSearch/static/js/main.98a285bf.chunk.js",
+    "main.js.map": "/AuctionSearch/static/js/main.98a285bf.chunk.js.map",
     "runtime-main.js": "/AuctionSearch/static/js/runtime-main.03f3d9fe.js",
     "runtime-main.js.map": "/AuctionSearch/static/js/runtime-main.03f3d9fe.js.map",
-    "static/js/2.88dc2f68.chunk.js": "/AuctionSearch/static/js/2.88dc2f68.chunk.js",
-    "static/js/2.88dc2f68.chunk.js.map": "/AuctionSearch/static/js/2.88dc2f68.chunk.js.map",
+    "static/js/2.6021a3e4.chunk.js": "/AuctionSearch/static/js/2.6021a3e4.chunk.js",
+    "static/js/2.6021a3e4.chunk.js.map": "/AuctionSearch/static/js/2.6021a3e4.chunk.js.map",
     "index.html": "/AuctionSearch/index.html",
-    "static/css/main.6f244dd1.chunk.css.map": "/AuctionSearch/static/css/main.6f244dd1.chunk.css.map",
-    "static/js/2.88dc2f68.chunk.js.LICENSE.txt": "/AuctionSearch/static/js/2.88dc2f68.chunk.js.LICENSE.txt",
+    "static/css/main.53456ef3.chunk.css.map": "/AuctionSearch/static/css/main.53456ef3.chunk.css.map",
+    "static/js/2.6021a3e4.chunk.js.LICENSE.txt": "/AuctionSearch/static/js/2.6021a3e4.chunk.js.LICENSE.txt",
     "static/media/AllianceLogo.806ffc05.png": "/AuctionSearch/static/media/AllianceLogo.806ffc05.png",
-    "static/media/App.css": "/AuctionSearch/static/media/searchBackground.2dc6a33a.webp"
+    "static/media/ItemCard.css": "/AuctionSearch/static/media/LifeCraft_Font.7f2bcab9.ttf",
+    "static/media/index.css": "/AuctionSearch/static/media/background.5a441248.jpg",
+    "static/media/MainView.css": "/AuctionSearch/static/media/searchBackground.2dc6a33a.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.03f3d9fe.js",
-    "static/js/2.88dc2f68.chunk.js",
-    "static/css/main.6f244dd1.chunk.css",
-    "static/js/main.8c3b8561.chunk.js"
+    "static/js/2.6021a3e4.chunk.js",
+    "static/css/main.53456ef3.chunk.css",
+    "static/js/main.98a285bf.chunk.js"
   ]
 }
